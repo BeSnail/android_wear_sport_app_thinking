@@ -1,15 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://besnail.github.io/android_wear_sport_app_thinking</id>
-    <title>Gridea</title>
-    <updated>2019-12-25T12:06:05.489Z</updated>
+    <title>Android Wear App 开发实践</title>
+    <updated>2019-12-26T07:38:54.148Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://besnail.github.io/android_wear_sport_app_thinking"/>
     <link rel="self" href="https://besnail.github.io/android_wear_sport_app_thinking/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>记录Android Wear app 开发中的经验所得，与君分享</subtitle>
     <logo>https://besnail.github.io/android_wear_sport_app_thinking/images/avatar.png</logo>
     <icon>https://besnail.github.io/android_wear_sport_app_thinking/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, Android Wear App 开发实践</rights>
+    <entry>
+        <title type="html"><![CDATA[Wear OS App 架构设计]]></title>
+        <id>https://besnail.github.io/android_wear_sport_app_thinking/post/xl0YEjPTz</id>
+        <link href="https://besnail.github.io/android_wear_sport_app_thinking/post/xl0YEjPTz">
+        </link>
+        <updated>2019-12-26T02:09:15.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="需求背景">需求背景</h2>
+<p>小米手表，vivo需求，自家应用</p>
+<h2 id="需求">需求</h2>
+<p><strong>v1:</strong> 在手表端实现：</p>
+<h3 id="用户同步">用户同步</h3>
+<p>1.基于单点登录，将手表与手机的关系定义为绑定。</p>
+<p>2.手机端退出登录后，手表不退出登录状态，为独立运行的，退出行为不与手机绑定，手表仅做提示，可以忽略或者同步切换账号，并在个人中心添加与手机账号同步的功能</p>
+<p>3.同种设备单点登录，即同一平台app账号单点登录，同一时间 仅可一只手表端登录，先登录的被后登录的T掉</p>
+<p>4.手机登录账号A  ，手表登录账号B ， 手表需提示 ， 且手表不接收推送数据，切换成功后进行数据同步。</p>
+<h3 id="跑步轨迹类运动课程">跑步轨迹类运动课程</h3>
+<p>通过结构化的数据向手表下发课程。课程包括：运动阶段，心率预警，速度里程等语音播报，并得出以下数据。</p>
+<h4 id="课程列表">课程列表</h4>
+<p>写死还是接口下发？<br>
+下发</p>
+<h4 id="课程简介">课程简介</h4>
+<p>logo，课程名称，说明，禁忌，小节结构</p>
+<h4 id="进度控制">进度控制</h4>
+<p>开始，暂停，结束</p>
+<h4 id="运动检测和计算">运动检测和计算</h4>
+<figure data-type="image" tabindex="1"><img src="https://besnail.github.io/android_wear_sport_app_thinking/post-images/1577331435853.png" alt=""></figure>
+<blockquote>
+<p>什么是步频和步幅？<br>
+步频：所谓步频指的是你在跑步或走路时，双腿转换支撑点的频率，你也可以简单地理解成是每分钟脚落地的次数。例如：在1分钟内，双脚共踏出140步，那么你的步频就是每分钟140次。</p>
+</blockquote>
+<blockquote>
+<p>步幅：步幅指的是一步的距离，以脚的中心算，你走或跑一步后，同一只脚两次连续着地之间的距离。通过下图可以让你对步幅有更直观的认识。<br>
+步频和步幅对跑步效果有何影响？步频和步幅对跑步效果有何影响？<br>
+http://sports.sina.com.cn/run/2017-12-05/doc-ifypikwt9895581.shtml</p>
+</blockquote>
+<p>热量计算<br>
+float calory = mei_degreasing * 3.5 * weight * (_sportTime / 60.0) / 200;<br>
+calory = calory &gt; 0 ? calory : 1<br>
+CGFloat weight = defaultWeight &gt; 0 ? defaultWeight : 60;</p>
+<h4 id="课程进度检测">课程进度检测</h4>
+<p>通过小节信息比对当前状态</p>
+<h3 id="不同步手机只通过api同步同步本地缓存">不同步手机，只通过api同步，同步本地缓存</h3>
+<p>通过网络接口上传数据</p>
+<h3 id="数据读取-最近运动">数据读取： 最近运动</h3>
+<p>从数据库取出 同用户的所有记录，从接口取出 同设备的（或不同设备的） 同用户的记录</p>
+<h3 id="语音播报功能">语音播报功能</h3>
+<p>使用不同的key存储同的声音文件，最后拼接播放<br>
+http://www.jcodecraeer.com/a/anzhuokaifa/2017/0929/8568.html</p>
+<h1 id="架构设计">架构设计</h1>
+<h3 id="1方案概述">1）方案概述。</h3>
+<p>对设计方案的概括性描述。</p>
+<h3 id="2设计约束">2）设计约束。</h3>
+<p>包括要遵循的标准或规范，技术上依赖的假设条件等。</p>
+<h3 id="3技术选型">3）技术选型。</h3>
+<p>包括系统运行的软硬件环境，研发、测试的软硬件环境，编程语言，现有或开源框架、平台、模块、基础库的重用策略。</p>
+<h3 id="4系统结构">4）系统结构。</h3>
+<p>包括系统的网络部署结构，子系统划分。推荐用UML部署图、包图描述。</p>
+<h3 id="5关键技术设计">5）关键技术设计。</h3>
+<p>每个系统关键点不一样，但一般都会有安全设计，一些算法的设计。</p>
+<h3 id="6接口设计">6）接口设计。</h3>
+<p>包括协议栈，子系统间的接口数据结构，子系统间的业务流程描述。业务流程推荐用UML序列图描述。</p>
+<h3 id="7数据设计">7）数据设计。</h3>
+<p>流动的数据已通过接口设计，这里描述要存储的数据。数据的组织形式不一样，比如NoSQL，NewSQL，SQL等不同类型，描述方式也会不一样。关系数据库推荐用ER模型描述顶层逻辑结构，字段表描述物理结构。</p>
+<h3 id="8质量预测">8）质量预测。</h3>
+<p>对遗留缺陷率、平均无故障运行时间等质量指标进行预测，提出可能出现的缺陷和问题。</p>
+<h2 id="页面逻辑">页面逻辑</h2>
+<h2 id="功能分析">功能分析</h2>
+<h2 id="总体架构">总体架构</h2>
+<h4 id="表现层presentation用户界面负责视觉和用户互动">表现层（presentation）：用户界面，负责视觉和用户互动</h4>
+<p>即用户界面，不考虑数据业务等等，第一步先完成此层开发。</p>
+<ol>
+<li>启动
+<ul>
+<li>闪屏页</li>
+<li>账号同步页</li>
+</ul>
+</li>
+<li>课程
+<ul>
+<li>课程列表</li>
+<li>课程简介</li>
+<li>身高体重年龄录入（如果用户信息没有录入相关信息展示）</li>
+<li>开始倒计时</li>
+<li>运动中
+<ul>
+<li>停止 开始控制页</li>
+<li>实时显示仪表页</li>
+<li>运动弹窗
+<ul>
+<li>心率过高警告</li>
+<li>小节提示</li>
+<li>课程完成恭喜</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>运动完成-数据展示页</li>
+</ul>
+</li>
+<li>运动历史记录列表
+<ul>
+<li>跳转运动完成数据展示页</li>
+</ul>
+</li>
+<li>个人中心页</li>
+</ol>
+<h4 id="业务层business实现业务逻辑">业务层（business）：实现业务逻辑</h4>
+<h4 id="持久层persistence提供数据sql-语句就放在这一层">持久层（persistence）：提供数据，SQL 语句就放在这一层</h4>
+<h4 id="数据库database-保存数据">数据库（database） ：保存数据</h4>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
         <id>https://besnail.github.io/android_wear_sport_app_thinking/post/about</id>
@@ -31,10 +142,8 @@
         <link href="https://besnail.github.io/android_wear_sport_app_thinking/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+        <content type="html"><![CDATA[<!-- more -->
+<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 <!-- more -->
 <p><a href="https://github.com/getgridea/gridea">Github</a><br>
