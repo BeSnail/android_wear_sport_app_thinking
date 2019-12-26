@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://besnail.github.io/android_wear_sport_app_thinking</id>
     <title>Android Wear App 开发实践</title>
-    <updated>2019-12-26T07:38:54.148Z</updated>
+    <updated>2019-12-26T08:10:21.873Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://besnail.github.io/android_wear_sport_app_thinking"/>
     <link rel="self" href="https://besnail.github.io/android_wear_sport_app_thinking/atom.xml"/>
@@ -17,7 +17,7 @@
         </link>
         <updated>2019-12-26T02:09:15.000Z</updated>
         <content type="html"><![CDATA[<h2 id="需求背景">需求背景</h2>
-<p>小米手表，vivo需求，自家应用</p>
+<p>小米手表，vi需求，自家应用</p>
 <h2 id="需求">需求</h2>
 <p><strong>v1:</strong> 在手表端实现：</p>
 <h3 id="用户同步">用户同步</h3>
@@ -78,7 +78,7 @@ http://www.jcodecraeer.com/a/anzhuokaifa/2017/0929/8568.html</p>
 <h2 id="页面逻辑">页面逻辑</h2>
 <h2 id="功能分析">功能分析</h2>
 <h2 id="总体架构">总体架构</h2>
-<h4 id="表现层presentation用户界面负责视觉和用户互动">表现层（presentation）：用户界面，负责视觉和用户互动</h4>
+<h4 id="表现层presentation用户界面负责视觉和用户互动view-及-viewmodel">表现层（presentation）：用户界面，负责视觉和用户互动(View 及 ViewModel)</h4>
 <p>即用户界面，不考虑数据业务等等，第一步先完成此层开发。</p>
 <ol>
 <li>启动
@@ -117,6 +117,31 @@ http://www.jcodecraeer.com/a/anzhuokaifa/2017/0929/8568.html</p>
 <li>个人中心页</li>
 </ol>
 <h4 id="业务层business实现业务逻辑">业务层（business）：实现业务逻辑</h4>
+<ol>
+<li>账号同步</li>
+<li>获取课程列表</li>
+<li>获取课程详情</li>
+<li>上传用户体质信息</li>
+<li>解析课程
+<ul>
+<li>小节信息</li>
+<li>心率预警阈值</li>
+</ul>
+</li>
+<li>获取传感器数据
+<ul>
+<li>步数</li>
+<li>距离</li>
+<li>时间</li>
+<li>速度</li>
+<li>计算得出 完成度 配速 热量 AVG 步频 步幅</li>
+</ul>
+</li>
+<li>完成缓存 上传数据</li>
+<li>获取缓存 获取api数据</li>
+<li>获取用户信息</li>
+<li>退出登录</li>
+</ol>
 <h4 id="持久层persistence提供数据sql-语句就放在这一层">持久层（persistence）：提供数据，SQL 语句就放在这一层</h4>
 <h4 id="数据库database-保存数据">数据库（database） ：保存数据</h4>
 ]]></content>
