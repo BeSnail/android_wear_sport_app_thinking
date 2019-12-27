@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://besnail.github.io/android_wear_sport_app_thinking</id>
+    <id>https://besnail.github.io/blog</id>
     <title>Android Wear App 开发实践</title>
-    <updated>2019-12-27T08:42:23.560Z</updated>
+    <updated>2019-12-27T08:44:24.446Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://besnail.github.io/android_wear_sport_app_thinking"/>
-    <link rel="self" href="https://besnail.github.io/android_wear_sport_app_thinking/atom.xml"/>
+    <link rel="alternate" href="https://besnail.github.io/blog"/>
+    <link rel="self" href="https://besnail.github.io/blog/atom.xml"/>
     <subtitle>记录Android Wear app 开发中的经验所得，与君分享</subtitle>
-    <logo>https://besnail.github.io/android_wear_sport_app_thinking/images/avatar.png</logo>
-    <icon>https://besnail.github.io/android_wear_sport_app_thinking/favicon.ico</icon>
+    <logo>https://besnail.github.io/blog/images/avatar.png</logo>
+    <icon>https://besnail.github.io/blog/favicon.ico</icon>
     <rights>All rights reserved 2019, Android Wear App 开发实践</rights>
     <entry>
         <title type="html"><![CDATA[Wear OS App 架构设计]]></title>
-        <id>https://besnail.github.io/android_wear_sport_app_thinking/post/xl0YEjPTz</id>
-        <link href="https://besnail.github.io/android_wear_sport_app_thinking/post/xl0YEjPTz">
+        <id>https://besnail.github.io/blog/post/xl0YEjPTz</id>
+        <link href="https://besnail.github.io/blog/post/xl0YEjPTz">
         </link>
         <updated>2019-12-26T02:09:15.000Z</updated>
         <content type="html"><![CDATA[<h2 id="需求背景">需求背景</h2>
@@ -35,7 +35,7 @@
 <h4 id="进度控制">进度控制</h4>
 <p>开始，暂停，结束</p>
 <h4 id="运动检测和计算">运动检测和计算</h4>
-<figure data-type="image" tabindex="1"><img src="https://besnail.github.io/android_wear_sport_app_thinking/post-images/1577331435853.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://besnail.github.io/blog/post-images/1577331435853.png" alt=""></figure>
 <blockquote>
 <p>什么是步频和步幅？<br>
 步频：所谓步频指的是你在跑步或走路时，双腿转换支撑点的频率，你也可以简单地理解成是每分钟脚落地的次数。例如：在1分钟内，双脚共踏出140步，那么你的步频就是每分钟140次。</p>
@@ -172,8 +172,8 @@ http://www.jcodecraeer.com/a/anzhuokaifa/2017/0929/8568.html</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于我]]></title>
-        <id>https://besnail.github.io/android_wear_sport_app_thinking/post/about</id>
-        <link href="https://besnail.github.io/android_wear_sport_app_thinking/post/about">
+        <id>https://besnail.github.io/blog/post/about</id>
+        <link href="https://besnail.github.io/blog/post/about">
         </link>
         <updated>2019-01-25T11:09:48.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
