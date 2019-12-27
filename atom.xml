@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://besnail.github.io/blog</id>
-    <title>besnail&apos;s Blog</title>
-    <updated>2019-12-27T08:52:07.020Z</updated>
+    <title>Besnail&apos;s Blog</title>
+    <updated>2019-12-27T08:55:36.436Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://besnail.github.io/blog"/>
     <link rel="self" href="https://besnail.github.io/blog/atom.xml"/>
     <subtitle>记录开发中的经验所得，生活所思，与君分享</subtitle>
     <logo>https://besnail.github.io/blog/images/avatar.png</logo>
     <icon>https://besnail.github.io/blog/favicon.ico</icon>
-    <rights>All rights reserved 2019, besnail&apos;s Blog</rights>
+    <rights>All rights reserved 2019, Besnail&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[Wear OS App 架构设计]]></title>
         <id>https://besnail.github.io/blog/post/xl0YEjPTz</id>
