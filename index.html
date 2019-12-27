@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://besnail.github.io/blog/favicon.ico?v=1577437670979">
+<link rel="shortcut icon" href="https://besnail.github.io/blog/favicon.ico?v=1577440168176">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://besnail.github.io/blog/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://besnail.github.io/blog">
-        <img src="https://besnail.github.io/blog/images/avatar.png?v=1577437670979" class="site-logo">
+        <img src="https://besnail.github.io/blog/images/avatar.png?v=1577440168176" class="site-logo">
         <h1 class="site-title">Besnail&#39;s Blog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -132,6 +132,30 @@ var app = new Vue({
 </script>
 
 
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBLblroGtxTSM5-Rbf6xkrYFuHEi_Warng",
+    authDomain: "android-wear-blog.firebaseapp.com",
+    databaseURL: "https://android-wear-blog.firebaseio.com",
+    projectId: "android-wear-blog",
+    storageBucket: "android-wear-blog.appspot.com",
+    messagingSenderId: "4989473451",
+    appId: "1:4989473451:web:f31013a9be8a5eb2b49dee",
+    measurementId: "G-3WT4PN5G5Y"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
 
   </body>
